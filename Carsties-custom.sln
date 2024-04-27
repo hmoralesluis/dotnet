@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService", "src\Aucti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService", "src\SearchService\SearchService.csproj", "{3402A862-CB6C-4B44-B9A8-F5D4EB37FADF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Contracts", "src\Contracts\Contracts.csproj", "{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GatewayService", "src\GatewayService\GatewayService.csproj", "{23A8AD19-348A-4424-8134-40F67E44D33D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +27,14 @@ Global
 		{3402A862-CB6C-4B44-B9A8-F5D4EB37FADF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3402A862-CB6C-4B44-B9A8-F5D4EB37FADF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3402A862-CB6C-4B44-B9A8-F5D4EB37FADF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23A8AD19-348A-4424-8134-40F67E44D33D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23A8AD19-348A-4424-8134-40F67E44D33D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23A8AD19-348A-4424-8134-40F67E44D33D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23A8AD19-348A-4424-8134-40F67E44D33D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -30,5 +42,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B9B7A40A-51D2-42B7-A4FE-3CE64CEDE6BF} = {DB0B4030-F503-4783-A638-0869D82F60C7}
 		{3402A862-CB6C-4B44-B9A8-F5D4EB37FADF} = {DB0B4030-F503-4783-A638-0869D82F60C7}
+		{6FE70E21-32E7-46D8-80A9-0F8E692AB5D6} = {DB0B4030-F503-4783-A638-0869D82F60C7}
+		{23A8AD19-348A-4424-8134-40F67E44D33D} = {DB0B4030-F503-4783-A638-0869D82F60C7}
 	EndGlobalSection
 EndGlobal

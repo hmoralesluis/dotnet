@@ -1,6 +1,5 @@
 using System.Net;
-using MongoDB.Driver;
-using MongoDB.Entities;
+using MassTransit;
 using Polly;
 using Polly.Extensions.Http;
 using SearchService;
@@ -11,7 +10,21 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddHttpClient<AuctionSvcHttpClient>().AddPolicyHandler(GetRetryPolicy());
+builder.Services.AddMassTransit(x => {
+    x.AddConsumersFromNamespaceContaining<AuctionCreatedConsumer>();
+
+    x.SetEndpointNameFormatter(new KebabCaseEndpointNameFormatter("search", false));
+
+    x.UsingRabbitMq((context, cfg) => {
+        cfg.ConfigureEndpoints(context);
+        // cfg.ReceiveEndpoint("search-auction-created", e => {
+        //     e.UseMessageRetry(r => r.Interval(5, 5));
+        //     e.ConfigureConsumer<AuctionCreatedConsumer>(context);
+        // });
+    });  
+}) ;  
 
 var app = builder.Build();
 
